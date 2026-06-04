@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Piyush Water Tracker</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --teal-dark: #042f3f;
+            --teal-mid: #063d52;
+            --teal-light: #0a5c7a;
+            --teal-accent: #0ea5c9;
+            --teal-soft: #e0f7fc;
+            --rule: #c8e8f0;
+            --text: #102a35;
+            --muted: #4a7a8a;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: #f0fafd;
+            color: var(--text);
+            line-height: 1.75;
+            font-size: 15px;
+        }
+
+        /* ── Header ── */
+        .site-header {
+            background: var(--teal-dark);
+            padding: 0 2rem;
+        }
+
+        .header-inner {
+            max-width: 860px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--teal-accent);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: #fff;
+        }
+
+        .logo-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.3px;
+        }
+
+        .header-badge {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #7fd8f0;
+            border: 1px solid rgba(127, 216, 240, 0.35);
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        /* ── Hero ── */
+        .hero {
+            background: var(--teal-mid);
+            padding: 4rem 2rem 3.5rem;
+            text-align: center;
+            border-bottom: 3px solid var(--teal-accent);
+        }
+
+        .hero-eyebrow {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #5bcde8;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-sub {
+            color: #7fd8f0;
+            font-size: 0.9rem;
+            max-width: 480px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .meta-row {
+            display: inline-flex;
+            gap: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 0.6rem 1.5rem;
+        }
+
+        .meta-item {
+            font-size: 0.78rem;
+            color: #a0d8e8;
+        }
+
+        .meta-item strong {
+            color: #fff;
+            display: block;
+            font-size: 0.82rem;
+        }
+
+        /* ── Layout ── */
+        .page-body {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem;
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        /* ── Sidebar TOC ── */
+        .toc-sidebar {
+            position: sticky;
+            top: 2rem;
+        }
+
+        .toc-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--teal-accent);
+            display: inline-block;
+        }
+
+        .toc-list {
+            list-style: none;
+        }
+
+        .toc-list li {
+            margin-bottom: 0.15rem;
+        }
+
+        .toc-list a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.82rem;
+            color: var(--muted);
+            text-decoration: none;
+            padding: 5px 8px;
+            border-radius: 5px;
+            transition: background 0.15s, color 0.15s;
+            border-left: 2px solid transparent;
+        }
+
+        .toc-list a:hover {
+            background: var(--teal-soft);
+            color: var(--teal-accent);
+            border-left-color: var(--teal-accent);
+        }
+
+        .toc-num {
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: var(--teal-accent);
+            min-width: 16px;
+        }
+
+        /* ── Content ── */
+        .content section {
+            margin-bottom: 2.75rem;
+            padding-bottom: 2.75rem;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .content section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1.1rem;
+        }
+
+        .section-num {
+            width: 30px;
+            height: 30px;
+            background: var(--teal-dark);
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            letter-spacing: 0.5px;
+        }
+
+        .content h2 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--teal-dark);
+            letter-spacing: -0.2px;
+        }
+
+        .content p {
+            color: #374151;
+            margin-bottom: 0.85rem;
+            font-size: 0.92rem;
+        }
+
+        .content ul {
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 0.85rem;
+        }
+
+        .content ul li {
+            font-size: 0.92rem;
+            color: #374151;
+            padding: 5px 0 5px 1.5rem;
+            position: relative;
+            border-bottom: 1px solid #daf0f5;
+        }
+
+        .content ul li:last-child {
+            border-bottom: none;
+        }
+
+        .content ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            background: var(--teal-accent);
+            border-radius: 50%;
+        }
+
+        .info-box {
+            background: var(--teal-soft);
+            border-left: 3px solid var(--teal-accent);
+            border-radius: 0 6px 6px 0;
+            padding: 0.9rem 1.1rem;
+            margin: 1rem 0;
+            font-size: 0.88rem;
+            color: #063d52;
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+        }
+
+        .info-box svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            margin-top: 2px;
+            fill: var(--teal-accent);
+        }
+
+        /* Permission table */
+        .perm-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.88rem;
+        }
+
+        .perm-table th {
+            background: var(--teal-dark);
+            color: #fff;
+            padding: 8px 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.78rem;
+            letter-spacing: 0.5px;
+        }
+
+        .perm-table th:first-child {
+            border-radius: 6px 0 0 0;
+        }
+
+        .perm-table th:last-child {
+            border-radius: 0 6px 0 0;
+        }
+
+        .perm-table td {
+            padding: 9px 12px;
+            border-bottom: 1px solid var(--rule);
+            color: #374151;
+            vertical-align: top;
+        }
+
+        .perm-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .perm-table tr:nth-child(even) td {
+            background: #f0fafd;
+        }
+
+        .perm-name {
+            font-weight: 600;
+            color: var(--teal-dark);
+            font-size: 0.82rem;
+        }
+
+        /* Contact card */
+        .contact-card {
+            background: var(--teal-dark);
+            border-radius: 10px;
+            padding: 1.5rem 1.75rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .contact-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #5bcde8;
+        }
+
+        .contact-value {
+            font-size: 0.88rem;
+            color: #c8eaf0;
+        }
+
+        .contact-value a {
+            color: #7fe8ff;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(127, 232, 255, 0.3);
+        }
+
+        /* Footer */
+        .page-footer {
+            background: var(--teal-dark);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .footer-inner {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .footer-inner p {
+            font-size: 0.78rem;
+            color: #3a7a8a;
+            line-height: 1.6;
+        }
+
+        .footer-inner strong {
+            color: #7fd8f0;
+        }
+
+        @media (max-width: 640px) {
+            .page-body {
+                grid-template-columns: 1fr;
+            }
+
+            .toc-sidebar {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .meta-row {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .contact-card {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="#">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z" />
+                    </svg>
+                </div>
+                <span class="logo-name">Piyush Water Tracker</span>
+            </a>
+            <span class="header-badge">Legal Document</span>
+        </div>
+    </header>
+
+    <div class="hero">
+        <p class="hero-eyebrow">Legal &amp; Compliance</p>
+        <h1>Privacy Policy</h1>
+        <p class="hero-sub">This document explains how Piyush Water Tracker collects, uses, and protects your
+            information.</p>
+        <div class="meta-row">
+            <div class="meta-item"><strong>June 4, 2026</strong>Effective Date</div>
+            <div class="meta-item"><strong>June 4, 2026</strong>Last Updated</div>
+            <div class="meta-item"><strong>Version 1.0</strong>Document Version</div>
+        </div>
+    </div>
+
+    <div class="page-body">
+
+        <aside class="toc-sidebar">
+            <div class="toc-label">Contents</div>
+            <ul class="toc-list">
+                <li><a href="#overview"><span class="toc-num">01</span>Overview</a></li>
+                <li><a href="#info"><span class="toc-num">02</span>Information We Collect</a></li>
+                <li><a href="#use"><span class="toc-num">03</span>How We Use Your Data</a></li>
+                <li><a href="#storage"><span class="toc-num">04</span>Data Storage</a></li>
+                <li><a href="#sharing"><span class="toc-num">05</span>Sharing of Information</a></li>
+                <li><a href="#permissions"><span class="toc-num">06</span>App Permissions</a></li>
+                <li><a href="#children"><span class="toc-num">07</span>Children's Privacy</a></li>
+                <li><a href="#rights"><span class="toc-num">08</span>Your Rights</a></li>
+                <li><a href="#changes"><span class="toc-num">09</span>Policy Changes</a></li>
+                <li><a href="#contact"><span class="toc-num">10</span>Contact Us</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+
+            <section id="overview">
+                <div class="section-header">
+                    <div class="section-num">01</div>
+                    <h2>Overview</h2>
+                </div>
+                <p>Piyush Water Tracker ("we", "our", or "the App") is a hydration tracking application for Android,
+                    developed by NeoYaan Technology. This Privacy Policy describes what information we collect, how we
+                    use it, and your rights with respect to your personal data.</p>
+                <p>By downloading and using Piyush Water Tracker, you agree to the terms described in this Privacy
+                    Policy. If you do not agree, please discontinue use of the application.</p>
+                <div class="info-box">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Piyush Water Tracker is designed to keep your personal data secure. We do not sell your
+                        personal information to third parties under any circumstances.</span>
+                </div>
+            </section>
+
+            <section id="info">
+                <div class="section-header">
+                    <div class="section-num">02</div>
+                    <h2>Information We Collect</h2>
+                </div>
+                <p><strong>Data you provide directly:</strong></p>
+                <ul>
+                    <li>Daily water intake logs and hydration records</li>
+                    <li>Personal hydration goals and daily targets</li>
+                    <li>Reminder times and notification schedules</li>
+                    <li>Body weight (if provided for goal calculation)</li>
+                    <li>Historical hydration records and progress data</li>
+                </ul>
+                <p><strong>Automatically collected data:</strong></p>
+                <ul>
+                    <li>Device model and Android OS version (for compatibility)</li>
+                    <li>Anonymous crash reports and error logs via Firebase</li>
+                    <li>General app usage statistics (features used, session duration)</li>
+                </ul>
+                <div class="info-box">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                    <span>We never collect your contacts, SMS messages, call logs, location, or any data unrelated to
+                        your hydration tracking.</span>
+                </div>
+            </section>
+
+            <section id="use">
+                <div class="section-header">
+                    <div class="section-num">03</div>
+                    <h2>How We Use Your Data</h2>
+                </div>
+                <p>The information collected is used solely for the following purposes:</p>
+                <ul>
+                    <li>Displaying and tracking your daily water intake and hydration progress</li>
+                    <li>Calculating personalized hydration goals based on your profile</li>
+                    <li>Delivering local notifications and drink reminders at your scheduled times</li>
+                    <li>Syncing your hydration data securely via Firebase across sessions</li>
+                    <li>Diagnosing technical issues and improving app stability</li>
+                    <li>Responding to support requests you initiate</li>
+                </ul>
+                <p>We do not use your data for targeted advertising, behavioral profiling, or any commercial purpose
+                    beyond operating the application.</p>
+            </section>
+
+            <section id="storage">
+                <div class="section-header">
+                    <div class="section-num">04</div>
+                    <h2>Data Storage</h2>
+                </div>
+                <p>Your hydration data is stored using Firebase (Google LLC), a secure cloud platform. Data is
+                    transmitted and stored using industry-standard encryption (TLS/SSL). Firebase infrastructure is
+                    compliant with major international data protection standards.</p>
+                <p>Anonymous, non-identifiable crash and usage data may also be transmitted to Firebase Crashlytics to
+                    help us improve app stability and performance.</p>
+                <div class="info-box">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                    <span>Uninstalling Piyush Water Tracker will remove locally cached data. Your cloud-synced data on
+                        Firebase can be deleted by contacting us at the address below.</span>
+                </div>
+            </section>
+
+            <section id="sharing">
+                <div class="section-header">
+                    <div class="section-num">05</div>
+                    <h2>Sharing of Information</h2>
+                </div>
+                <p>Piyush Water Tracker does not sell, rent, or trade your personal information. We share limited data
+                    only with trusted third-party service providers solely to operate and improve the app:</p>
+                <ul>
+                    <li><strong>Firebase Firestore</strong> — secure cloud storage for hydration data (Google LLC)</li>
+                    <li><strong>Firebase Crashlytics</strong> — anonymous crash and error reporting (Google LLC)</li>
+                    <li><strong>Google Play Services</strong> — app distribution and update delivery</li>
+                </ul>
+                <p>We may disclose information if required by applicable law, court order, or governmental authority, or
+                    to protect the safety and security of our users.</p>
+            </section>
+
+            <section id="permissions">
+                <div class="section-header">
+                    <div class="section-num">06</div>
+                    <h2>App Permissions</h2>
+                </div>
+                <p>Piyush Water Tracker requests only the permissions necessary to provide its core functionality:</p>
+                <table class="perm-table">
+                    <thead>
+                        <tr>
+                            <th>Permission</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="perm-name">POST_NOTIFICATIONS</span></td>
+                            <td>To send hydration reminders and drink alerts</td>
+                        </tr>
+                        <tr>
+                            <td><span class="perm-name">SCHEDULE_EXACT_ALARM</span></td>
+                            <td>To deliver reminders at your precise scheduled times</td>
+                        </tr>
+                        <tr>
+                            <td><span class="perm-name">RECEIVE_BOOT_COMPLETED</span></td>
+                            <td>To restore scheduled reminders after device restart</td>
+                        </tr>
+                        <tr>
+                            <td><span class="perm-name">INTERNET</span></td>
+                            <td>To sync hydration data with Firebase securely</td>
+                        </tr>
+                        <tr>
+                            <td><span class="perm-name">VIBRATE</span></td>
+                            <td>To provide haptic feedback for notifications</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>You may revoke any permission at any time via <strong>Settings → Apps → Piyush Water Tracker →
+                        Permissions</strong> on your Android device.</p>
+            </section>
+
+            <section id="children">
+                <div class="section-header">
+                    <div class="section-num">07</div>
+                    <h2>Children's Privacy</h2>
+                </div>
+                <p>Piyush Water Tracker is not directed at children under the age of 13. We do not knowingly collect
+                    personal information from children under 13 years of age.</p>
+                <p>If you are a parent or guardian and believe your child has provided us with personal information,
+                    please contact us immediately at the address below. We will promptly delete any such information
+                    from our records.</p>
+            </section>
+
+            <section id="rights">
+                <div class="section-header">
+                    <div class="section-num">08</div>
+                    <h2>Your Rights</h2>
+                </div>
+                <p>As a user of Piyush Water Tracker, you have the following rights with respect to your data:</p>
+                <ul>
+                    <li><strong>Access:</strong> View all your hydration data directly within the app at any time</li>
+                    <li><strong>Deletion:</strong> Delete your data by contacting us or uninstalling the app</li>
+                    <li><strong>Opt-out:</strong> Disable notifications at any time through Android system settings</li>
+                    <li><strong>Portability:</strong> Request a copy of your data by contacting us</li>
+                    <li><strong>Inquiry:</strong> Contact us with any questions or concerns about your data</li>
+                </ul>
+            </section>
+
+            <section id="changes">
+                <div class="section-header">
+                    <div class="section-num">09</div>
+                    <h2>Changes to This Policy</h2>
+                </div>
+                <p>We reserve the right to update this Privacy Policy at any time. When changes are made, we will revise
+                    the "Last Updated" date at the top of this document and, where appropriate, notify users via an
+                    in-app notice.</p>
+                <p>Your continued use of Piyush Water Tracker following the posting of changes constitutes your
+                    acknowledgment and acceptance of the revised Privacy Policy.</p>
+            </section>
+
+            <section id="contact">
+                <div class="section-header">
+                    <div class="section-num">10</div>
+                    <h2>Contact Us</h2>
+                </div>
+                <p>If you have any questions, concerns, or requests regarding this Privacy Policy or the handling of
+                    your data, please contact us:</p>
+                <div class="contact-card">
+                    <div class="contact-item">
+                        <span class="contact-label">Application</span>
+                        <span class="contact-value">Piyush Water Tracker</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Developer</span>
+                        <span class="contact-value">NeoYaan Technology</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Email Address</span>
+                        <span class="contact-value"><a
+                                href="mailto:bksarita729@gmail.com">bksarita729@gmail.com</a></span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Location</span>
+                        <span class="contact-value">Kathmandu, Nepal</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Response Time</span>
+                        <span class="contact-value">Within 5 business days</span>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="page-footer">
+        <div class="footer-inner">
+            <p><strong>Piyush Water Tracker</strong> &nbsp;·&nbsp; Privacy Policy &nbsp;·&nbsp; Version 1.0
+                &nbsp;·&nbsp; Effective June 4, 2026</p>
+            <p style="margin-top:0.5rem;">© 2026 NeoYaan Technology. All rights reserved. &nbsp;·&nbsp; Kathmandu, Nepal
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
